@@ -1,0 +1,9 @@
+# POST http://localhost:5000/posts/
+# content-type: application/json
+
+# {
+#     "title": "beware",
+#     "message": "hello it me"
+# }
+
+GET  http://localhost:5000/posts/
