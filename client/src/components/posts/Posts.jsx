@@ -1,4 +1,4 @@
-import React from 'react'
+import Post from './post/Post'
 
 const Posts = () => {
 
@@ -7,7 +7,9 @@ const Posts = () => {
         <>
       
             <h2>posts</h2>
-            
+
+            <Post/>
+        
         </>
         
     )
