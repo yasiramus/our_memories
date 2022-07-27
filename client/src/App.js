@@ -7,9 +7,13 @@ import Form from "./components/form/Form";
 import Posts from "./components/posts/Posts";
 
 // imporation of images fromthe image folder
-import memories from "./images/beach.jpg";
+import memories from "./images/memories.png";
+
+import useStyles from "./styles.js";
 
 const App = () => {
+
+  const classes = useStyles();
 
   return (
 
@@ -17,7 +21,7 @@ const App = () => {
 
       <Container maxWidth="lg">
 
-        <AppBar position="static" color="inherit">
+        <AppBar className={classes.yasi} position="static" color="inherit">
 
           <Typography variant="h2" align="center">Memories</Typography>
 
@@ -31,7 +35,7 @@ const App = () => {
             
             <Grid container justify="space-between" alignItems="stretch" spacing={3}>
               
-              <Grid item xs={12} sm={7}> <Posts/> </Grid>
+              <Grid item xs={12} sm={7}><Posts/></Grid>
 
               <Grid item xs={12} sm={4}><Form/></Grid>
 
