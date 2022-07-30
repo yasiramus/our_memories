@@ -1,9 +1,31 @@
-# POST http://localhost:5000/posts/
+POST http://localhost:8000/posts/
+content-type: application/json
+
+{
+    "title": "Arafat",
+    "message": "hello it me"
+}
+
+# GET  http://localhost:8000/posts/
+
+# PATCH  http://localhost:5000/posts/62e2a8c8bb7a478744caeb5556
 # content-type: application/json
 
 # {
-#     "title": "beware",
-#     "message": "hello it me"
+#     "creator": "Yasira"
 # }
 
-GET  http://localhost:5000/posts/
+# DELETE http://localhost:8000/posts/62d370026563367cce11c7c9
+
+# PUT  http://localhost:5000/posts/62e2997b0ef71e2f8f05fbee
+
+# users
+# POST http://localhost:8000/user/
+# content-type: application/json
+
+# {
+
+#     "email":"yasirattu@gmail.com",
+#     "password":"123456"
+ 
+# }

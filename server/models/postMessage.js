@@ -16,11 +16,11 @@ const postSchema = new Schema({
     // converting an image to a string using base64
     selectedFile: String,
     
-    likeCount: {
+    likes: {
 
-        type: Number,
+        type: [ String ],
         
-        default: 0
+        default: []
 
     },
 

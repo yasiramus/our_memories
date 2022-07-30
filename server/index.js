@@ -1,13 +1,15 @@
-// using the module syntax 
+
 const express = require ("express");
 
 const mongoose =  require("mongoose");
 
 const cors = require("cors");
 
-const { routes } = require("./routes/posts");
-
 require("dotenv").config();
+
+const { routes } = require("./routes/posts.routes");
+
+const { usersRouter } = require("./routes/users.routes");
 
 // intializing the app
 const app = express();
@@ -19,10 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors())
 
-app.use("/posts", routes)
+app.use("/user", usersRouter);
+
+app.use("/posts", routes);
 
 // setting the port number 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 // this returns a promise 
 mongoose.connect(process.env.CONNECTIONURL, {
@@ -31,7 +35,7 @@ mongoose.connect(process.env.CONNECTIONURL, {
     
     useUnifiedTopology: true
     
-}).then(() => app.listen(PORT, console.log(`server running on port : ${PORT}`)))
+}).then(() => app.listen(PORT,() => console.log(`server running on port : ${ PORT }`)))
     
     .catch((error) => console.log(error.message));
     
